@@ -1,0 +1,8 @@
+.ImageContainer {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ImageContainer:hover {
+    transform: scale(1.1);
+  }
+  
