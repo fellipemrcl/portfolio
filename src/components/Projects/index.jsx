@@ -1,8 +1,22 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ProjectCard from "../ProjectCard";
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 
 const Projects = () => {
+  const [repositories, setRepositories] = useState([]);
+  const handleFetchRepositories = async () => {
+    const { data } = await api.get(`/users/fellipemrcl/repos`);
+    if (data) {
+      setRepositories(data);
+    }
+  };
+  useEffect(() => {
+    handleFetchRepositories();
+    console.log(repositories);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div
       id="projects"
@@ -10,22 +24,42 @@ const Projects = () => {
     >
       <h1 className="text-sky-50 text-6xl mb-5 font-poppins">My projects</h1>
       <Tabs>
-        <TabList className="bg-transparent">
-          <Tab>
-            <p>Front-end</p>
-          </Tab>
-          <Tab>Back-end</Tab>
-        </TabList>
+        <div className="flex items-center justify-center">
+          <TabList className="bg-transparent text-sky-50 text-lg font-poppins">
+            <Tab>
+              <p>Front-end</p>
+            </Tab>
+            <Tab>
+              <p>Back-end</p>
+            </Tab>
+          </TabList>
+        </div>
 
-        <TabPanel className="mt-10">
-          <ProjectCard
-            projectName="Front-end Online Store"
-            projectDescription="Loja online"
-            projectLink="https://github.com/fellipemrcl/frontend-online-store"
-          />
+        <TabPanel className="flex flex-row mt-10">
+          {repositories
+            .filter((r) => r.topics.includes("frontend"))
+            .map((r) => (
+              <ProjectCard
+                className="card mr-10"
+                key={r.id}
+                projectDescription={r.description}
+                projectLink={r.html_url}
+                projectName={r.name.toUpperCase().replaceAll("-", " ")}
+              />
+            ))}
         </TabPanel>
-        <TabPanel>
-          <h2>Any content 2</h2>
+        <TabPanel className="mt-10">
+          {repositories
+            .filter((r) => r.topics.includes("backend"))
+            .map((r) => (
+              <ProjectCard
+                className="card mr-5"
+                key={r.id}
+                projectDescription={r.description}
+                projectLink={r.html_url}
+                projectName={r.name.toUpperCase().replaceAll("-", " ")}
+              />
+            ))}
         </TabPanel>
       </Tabs>
     </div>

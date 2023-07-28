@@ -2,7 +2,7 @@
   position: relative;
   width: 190px;
   height: 254px;
-  background-color: #000;
+  background-color: #14213D;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -48,11 +48,11 @@
   font-size: 14px;
 }
 
-.card p:last-child {
+/* .card p:last-child {
   color: #e81cff;
   font-weight: 600;
 }
-
+ */
 .card:hover::after {
   filter: blur(30px);
 }
