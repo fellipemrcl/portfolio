@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import './styles.css';
+import "./styles.css";
 
 const ImageContainer = ({ imgSource, imgAlt }) => {
-  return <img className="ImageContainer" src={imgSource} alt={imgAlt} />;
+  return <img src={imgSource} alt={imgAlt} />;
 };
 
 ImageContainer.propTypes = {
