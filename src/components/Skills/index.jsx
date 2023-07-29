@@ -33,8 +33,8 @@ const Skills = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-around mt-10">
-      <h1 className="text-sky-50 text-6xl mb-5 font-poppins">My skills  </h1>
+    <div className="flex flex-col items-center justify-around mt-20 mb-20 w-full p-10">
+      <h1 className="text-sky-50 text-6xl mt-5 mb-10 font-poppins">My skills  </h1>
       <div className="grid grid-cols-7 gap-4">
         {technologies.map((tech, index) => (
           <div key={index} className="relative group cursor-pointer">
