@@ -3,6 +3,10 @@ import Button from "../Button";
 import "./styles.css";
 
 const AboutMe = () => {
+  const handleLink = (link) => {
+    window.open(link, "_blank");
+  };
+  const resumeLink = 'https://docs.google.com/document/d/1KE7MurC9rncoaHc9IY-HEVB47pS0Sbl_r1MdrOd4-pA/edit?usp=sharing';
   return (
     <section
       id="about-me"
@@ -25,8 +29,8 @@ const AboutMe = () => {
           and create innovative technological solutions.
         </p>
         <div className="flex items-center justify-around mt-5">
-          <Button btnContent="Hire Me" btnType="button" btnId="hire-btn" />
-          <Button btnContent="Resume" btnType="button" btnId="resume-btn" />
+          <Button btnContent="Know more" btnType="button" btnId="hire-btn" />
+          <Button btnContent="Resume" btnType="button" btnId="resume-btn" onClick={() => handleLink(resumeLink)} />
         </div>
       </div>
     </section>
