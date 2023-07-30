@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../Button";
+import './styles.css';
 
 const schema = yup
   .object({
@@ -27,7 +28,7 @@ const Contact = () => {
   });
   const onSubmit = (data) => console.log(data);
   return (
-    <div className="flex flex-col items-center justify-center mt-20 shadow-xl p-10">
+    <div className="flex flex-col items-center justify-center mt-20 shadow-xl p-10 bg-sky-950">
       <h1 className="text-sky-50 text-6xl mb-5 font-poppins">Contact me</h1>
       <form action="" className="flex flex-col">
         <label htmlFor="name">
@@ -78,6 +79,7 @@ const Contact = () => {
         btnContent="Send Message"
         btnType="button"
         onClick={handleSubmit(onSubmit)}
+        btnId="contact-btn"
       />
     </div>
   );

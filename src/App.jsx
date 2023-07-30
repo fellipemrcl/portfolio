@@ -14,8 +14,11 @@ const App = () => {
       <AboutMe />
       <Projects />
       <Skills />
-      <h1 id="experience" className="experience-heading text-6xl font-poppins mb-5 text-sky-50 text-center mt-10">
-        My experience
+      <h1
+        id="experience"
+        className="experience-heading text-6xl font-poppins mb-5 text-sky-50 text-center mt-10"
+      >
+        Experience
       </h1>
       <div className="flex flex-col items-center">
         <Experience

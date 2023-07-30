@@ -9,12 +9,12 @@ const Experience = ({ activities, companyName, period, position }) => {
           <div className="h-4 w-4 bg-gray-400 rounded-full mt-2"></div>
         </div>
         <div className="ml-8">
-          <h2 className="text-lg font-semibold mb-2 text-sky-50">
+          <h2 className="text-lg font-bold mb-2 text-yellow-500">
             {companyName}
           </h2>
-          <h3 className="text-md mb-2 text-sky-50">{period}</h3>
-          <p className="text-xl font-bold mb-2 text-sky-50">{position}</p>
-          <p className="text-xl text-sky-50">Activities</p>
+          <h3 className="text-md mb-2 italic text-sky-50">{period}</h3>
+          <p className="text-lg font-bold mb-2 text-yellow-500">{position}</p>
+          <p className="text-lg font-bold text-sky-50">Activities</p>
           {activities?.length > 0 && (
             <ul className="activities-list text-md text-sky-50">
               {activities.map((activity, index) => (

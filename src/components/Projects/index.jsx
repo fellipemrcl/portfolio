@@ -14,7 +14,6 @@ const Projects = () => {
   };
   useEffect(() => {
     handleFetchRepositories();
-    console.log(repositories);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -22,9 +21,9 @@ const Projects = () => {
       id="projects"
       className="flex flex-col items-center justify-center mt-20"
     >
-      <h1 className="text-sky-50 text-6xl mb-5 font-poppins">My projects</h1>
+      <h1 className="text-sky-50 text-6xl mb-5 font-poppins">Projects</h1>
       <Tabs>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center m-10">
           <TabList className="bg-transparent text-sky-50 text-lg font-poppins">
             <Tab>
               <p>Front-end</p>

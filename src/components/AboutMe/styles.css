@@ -1,0 +1,9 @@
+#hire-btn::after,
+#resume-btn::after {
+  background-color: #082f49;
+}
+
+#hire-btn::before,
+#resume-btn::before {
+  background-color: #082f49;
+}
