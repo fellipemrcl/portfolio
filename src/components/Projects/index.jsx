@@ -39,7 +39,7 @@ const Projects = () => {
             .filter((r) => r.topics.includes("frontend"))
             .map((r) => (
               <ProjectCard
-                className="card mr-10"
+                className="card mr-10 mt-5"
                 key={r.id}
                 projectDescription={r.description}
                 projectLink={r.html_url}
@@ -47,12 +47,12 @@ const Projects = () => {
               />
             ))}
         </TabPanel>
-        <TabPanel className="mt-10">
+        <TabPanel className="flex flex-row mt-10">
           {repositories
             .filter((r) => r.topics.includes("backend"))
             .map((r) => (
               <ProjectCard
-                className="card mr-5"
+                className="card mr-10 mt-5"
                 key={r.id}
                 projectDescription={r.description}
                 projectLink={r.html_url}
