@@ -73,7 +73,7 @@ const Contact = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center mt-20 shadow-xl p-10 bg-sky-950">
-      <h1 className="text-sky-50 text-6xl mb-5 font-poppins">Contact me</h1>
+      <h1 id="contact-me" className="text-sky-50 text-6xl mb-5 font-poppins">Contact me</h1>
       <form ref={form} className="flex flex-col">
         <label htmlFor="name">
           <input
