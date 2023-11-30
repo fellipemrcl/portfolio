@@ -21,7 +21,9 @@ const Projects = () => {
       id="projects"
       className="flex flex-col items-center justify-center mt-20"
     >
-      <h1 id="projects" className="text-sky-50 text-6xl mb-5 font-poppins">Projects</h1>
+      <h1 id="projects" className="text-sky-50 text-6xl mb-5 font-poppins">
+        Projects
+      </h1>
       <Tabs>
         <div className="flex items-center justify-center m-10">
           <TabList className="bg-transparent text-sky-50 text-lg font-poppins">
@@ -30,6 +32,9 @@ const Projects = () => {
             </Tab>
             <Tab>
               <p>Back-end</p>
+            </Tab>
+            <Tab>
+              <p>Full-stack</p>
             </Tab>
           </TabList>
         </div>
@@ -50,6 +55,19 @@ const Projects = () => {
         <TabPanel className="flex flex-row mt-10">
           {repositories
             .filter((r) => r.topics.includes("backend"))
+            .map((r) => (
+              <ProjectCard
+                className="card mr-10 mt-5"
+                key={r.id}
+                projectDescription={r.description}
+                projectLink={r.html_url}
+                projectName={r.name.toUpperCase().replaceAll("-", " ")}
+              />
+            ))}
+        </TabPanel>
+        <TabPanel className="flex flex-row mt-10">
+          {repositories
+            .filter((r) => r.topics.includes("fullstack"))
             .map((r) => (
               <ProjectCard
                 className="card mr-10 mt-5"
