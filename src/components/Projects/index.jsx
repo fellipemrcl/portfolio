@@ -21,7 +21,7 @@ const Projects = () => {
       id="projects"
       className="flex flex-col items-center justify-center mt-20"
     >
-      <h1 className="text-sky-50 text-6xl mb-5 font-poppins">Projects</h1>
+      <h1 id="projects" className="text-sky-50 text-6xl mb-5 font-poppins">Projects</h1>
       <Tabs>
         <div className="flex items-center justify-center m-10">
           <TabList className="bg-transparent text-sky-50 text-lg font-poppins">
