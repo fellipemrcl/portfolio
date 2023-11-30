@@ -20,7 +20,7 @@ const App = () => {
         id="experience"
         className="experience-heading text-6xl font-poppins mb-5 text-sky-50 text-center mt-10"
       >
-        Experiência
+        Experience
       </h1>
       <div className="flex flex-col items-center">
         <Experience
