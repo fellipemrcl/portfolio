@@ -5,7 +5,6 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import ScrollToTop from "react-scroll-to-top";
 
 import "./index.css";
 
@@ -21,7 +20,7 @@ const App = () => {
         id="experience"
         className="experience-heading text-6xl font-poppins mb-5 text-sky-50 text-center mt-10"
       >
-        Experience
+        Experiência
       </h1>
       <div className="flex flex-col items-center">
         <Experience
@@ -48,7 +47,6 @@ const App = () => {
         />
       </div>
       <Contact />
-      <ScrollToTop id="scroll-to-top-btn" smooth />
     </>
   );
 };
