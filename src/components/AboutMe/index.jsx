@@ -6,7 +6,7 @@ const AboutMe = () => {
   const handleLink = (link) => {
     window.open(link, "_blank");
   };
-  const resumeLink = 'https://docs.google.com/document/d/1KE7MurC9rncoaHc9IY-HEVB47pS0Sbl_r1MdrOd4-pA/edit?usp=sharing';
+  const resumeLink = 'https://docs.google.com/document/d/1c0NHBP3i8lvEwhud9tvZ-9hBv_8191bYiOMkwdWAgfw/edit?usp=sharing';
   return (
     <section
       id="about-me"
