@@ -79,6 +79,7 @@ const Projects = () => {
             ))}
         </TabPanel>
       </Tabs>
+      <p className="text-white italic text-lg">Hover over the project to see its description. Click to go to your respective repository on GitHub</p>
     </div>
   );
 };
