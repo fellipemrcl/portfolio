@@ -24,6 +24,7 @@ const Projects = () => {
       <h1 id="projects" className="text-sky-50 text-6xl mb-5 font-poppins">
         Projects
       </h1>
+      <p className="text-white italic text-lg">Hover over the project to see its description. Click to go to its respective repository on GitHub</p>
       <Tabs>
         <div className="flex items-center justify-center m-10">
           <TabList className="bg-transparent text-sky-50 text-lg font-poppins">
@@ -79,8 +80,8 @@ const Projects = () => {
             ))}
         </TabPanel>
       </Tabs>
-      <p className="text-white italic text-lg">Hover over the project to see its description. Click to go to its respective repository on GitHub</p>
     </div>
+      
   );
 };
 
