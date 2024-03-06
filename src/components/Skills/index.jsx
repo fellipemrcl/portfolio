@@ -13,6 +13,8 @@ import postmanIcon from "../../assets/icons/icons8-postman-api.svg";
 import bashIcon from "../../assets/icons/icons8-bash.svg";
 import dockerIcon from "../../assets/icons/icons8-docker.svg";
 import awsIcon from "../../assets/icons/icons8-amazon-web-services .svg";
+import javaIcon from "../../assets/icons/icons8-java.svg";
+import springIcon from "../../assets/icons/icons8-spring-boot.svg";
 
 const Skills = () => {
   const technologies = [
@@ -30,12 +32,14 @@ const Skills = () => {
     { icon: mysqlIcon, name: "MySQL" },
     { icon: bashIcon, name: "Bash" },
     { icon: postmanIcon, name: "Postman" },
+    { icon: javaIcon, name: "Java" },
+    { icon: springIcon, name: "Spring Boot" },
   ];
 
   return (
     <div className="flex flex-col items-center justify-around mt-20 mb-20 w-full p-10 bg-sky-950 shadow-xl">
       <h1 className="text-sky-50 text-6xl mt-5 mb-10 font-poppins">Skills</h1>
-      <div className="grid grid-cols-7 gap-4">
+      <div className="grid grid-cols-8 gap-4">
         {technologies.map((tech, index) => (
           <div key={index} className="relative group cursor-pointer">
             <ImageContainer
